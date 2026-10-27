@@ -1,69 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>غراس - Ghras</title>
+<title>غراس</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Tajawal',sans-serif}
-body{background:#121212;color:#fff}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #222;position:sticky;top:0;background:#121212;z-index:10}
-.logo{font-weight:700;font-size:20px;color:#E0FF00}
-nav{display:flex;gap:18px;font-size:13px}
-nav span{cursor:pointer;color:#aaa}
-nav span:hover{color:#E0FF00}
-.btn-neon{background:#E0FF00;color:#121212;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;border:none;cursor:pointer}
-.hero{padding:80px 20px 40px;text-align:center}
-.hero h1{font-size:28px;line-height:1.5;margin-bottom:12px}
-.hero h1 span{color:#121212;background:#E0FF00;padding:0 8px;border-radius:6px}
-.hero p{color:#888;font-size:13px;max-width:320px;margin:0 auto 22px;line-height:1.7}
+body{background:#0E1210;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #1e2a22;position:sticky;top:0;background:#0E1210;z-index:10}
+.logo{font-weight:700;font-size:20px;color:#00FF88}
+nav{display:flex;gap:16px;font-size:12px}
+nav span{cursor:pointer;color:#6b7d73}
+nav span:hover{color:#00FF88}
+.btn-neon{background:#00FF88;color:#0E1210;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;border:none;cursor:pointer}
+.hero{padding:70px 20px 40px;text-align:center}
+.hero h1{font-size:32px;line-height:1.4;margin-bottom:14px;color:#D6E8D9}
+.hero h1 span{background:#00FF88;color:#0E1210;padding:0 8px;border-radius:6px}
+.hero p{color:#6b7d73;font-size:13px;max-width:330px;margin:0 auto 24px;line-height:1.8}
 .hero-btns{display:flex;gap:10px;justify-content:center}
-.btn-fill{background:#E0FF00;color:#000;padding:10px 18px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
-.btn-outline{background:transparent;color:#fff;border:1px solid #333;padding:10px 18px;border-radius:10px;cursor:pointer}
-.section{padding:50px 20px;border-top:1px solid #1e1e1e}
-.section h2{color:#E0FF00;font-size:18px;margin-bottom:10px}
-.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;padding:14px;margin-top:10px}
-.card h3{font-size:14px;color:#fff}
-.card p{font-size:12px;color:#777;margin-top:6px}
-.footer{text-align:center;padding:40px 20px 20px;border-top:1px solid #1e1e1e;margin-top:30px;color:#666;font-size:12px;line-height:2}
+.btn-fill{background:#00FF88;color:#0E1210;padding:12px 20px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+.btn-outline{background:transparent;color:#00FF88;border:1px solid #1e2a22;padding:12px 20px;border-radius:10px;cursor:pointer}
+.section{padding:50px 20px;border-top:1px solid #1e2a22}
+.section h2{color:#00FF88;font-size:16px;margin-bottom:12px}
+.card{background:#151C18;border:1px solid #1e2a22;border-radius:14px;padding:14px;margin-top:10px}
+.card h3{font-size:13px;color:#fff}
+.card p{font-size:11px;color:#6b7d73;margin-top:5px}
+.footer{text-align:center;padding:40px 20px 20px;border-top:1px solid #1e2a22;margin-top:30px;color:#5a6b62;font-size:11px;line-height:2}
 </style>
 </head>
 <body>
 <header>
-<div class="logo">🌿 غراس</div>
+<button class="btn-neon" onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">ابدأ مبادرة</button>
+<div style="display:flex;align-items:center;gap:12px">
 <nav>
 <span onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})">الرئيسية</span>
-<span onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">تصفح المبادرات</span>
+<span onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">المبادرات</span>
 <span onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">عن المنصة</span>
 </nav>
-<button class="btn-neon" onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">ابدأ مبادرة</button>
+<div class="logo">🌿 غراس</div>
+</div>
 </header>
 
 <div class="hero" id="home">
-<h1>أنت تملك <span>المهارة،</span><br>والأرض تحتاجها.</h1>
-<p>غراس هي مساحتك المجتمعية لتبادل المهارات. سواء كنت مصمم، مبرمج، أو محب للعمل الميداني، هناك مبادرة بيئية تنتظر بصمتك.</p>
+<h1>أنت تملك <span>المهارة،</span> والأرض<br>تحتاجها.</h1>
+<p>غِراس هي مساحتك المجتمعية لتبادل المهارات سواء كنت مصمماً مبرمجاً أو محباً للعمل الميداني هناك مبادرة بيئية تنتظر بصمتك.</p>
 <div class="hero-btns">
-<button class="btn-fill">سجل مهارتك</button>
+<button class="btn-fill">سجل بمهارتك</button>
 <button class="btn-outline">استكشف الفرص</button>
 </div>
 </div>
 
 <div class="section" id="mobs">
-<h2>⚡ مبادرات تحتاج مهاراتك الآن</h2>
-<div class="card"><h3>تصميم لوجو لمبادرة تشجير</h3><p>محتاجين مصمم في القاهرة - تطوع 3 ساعات</p></div>
-<div class="card"><h3>تصوير حملة تنظيف النيل</h3><p>محتاجين مصور - الجيزة يوم الجمعة</p></div>
-<div class="card"><h3>كتابة محتوى لتوعية بيئية</h3><p>محتاجين كاتب محتوى - أونلاين</p></div>
+<h2>🌱 مبادرات تحتاج مهاراتك</h2>
+<div class="card"><h3>تصميم لوجو لمبادرة تشجير</h3><p>القاهرة - تطوع 3 ساعات</p></div>
+<div class="card"><h3>تصوير حملة تنظيف النيل</h3><p>الجيزة - يوم الجمعة</p></div>
+<div class="card"><h3>كتابة محتوى لتوعية بيئية</h3><p>أونلاين - مرن</p></div>
 </div>
 
 <div class="section" id="about">
 <h2>عن غراس</h2>
-<div class="card"><p style="color:#ccc;line-height:1.8">   الناس اللي عندها مهارات بالمبادرات البيئية اللي محتاجة مساعدة بجد الفكرة كلها تطوع وتبادل خبرات .</p></div>
+<div class="card"><p style="color:#9aada3;line-height:1.8"الناس اللي عندها مهارات بالمبادرات البيئية اللي محتاجة مساعدة بجد الفكرة كلها تطوع وتبادل خبرات.</p></div>
 </div>
 
 <div class="footer">
-created by dina alssawy <br>
+created by dina alssawy<br>
 All Rights Reserved © 2026 - غراس 🌿
 </div>
 
