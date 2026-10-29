@@ -3,65 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>غراس</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;400&display=swap" rel="stylesheet">
+<title>غراس - ازرع مهارتك</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Tajawal',sans-serif}
-body{background:#0E1210;color:#fff}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #1e2a22;position:sticky;top:0;background:#0E1210;z-index:10}
-.logo{font-weight:700;font-size:20px;color:#06402A;text-shadow:0 0 16px rgba(6,64,42,0.8)}
-nav{display:flex;gap:16px;font-size:12px}
-nav span{cursor:pointer;color:#6b7d73}
-nav span:hover{color:#0A7A42}
-.btn-neon{background:linear-gradient(180deg,#0A5C36,#03261A);color:#c8e6d5;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid #0A5C36;cursor:pointer;box-shadow:0 0 18px rgba(10,92,54,0.55)}
-.hero{padding:70px 20px 40px;text-align:center}
-.hero h1{font-size:32px;line-height:1.4;margin-bottom:14px;color:#D6E8D9}
-.hero h1 span{background:linear-gradient(180deg,#0A5C36,#03261A);color:#c8e6d5;padding:0 8px;border-radius:6px;border:1px solid #0A5C36;box-shadow:0 0 18px rgba(10,92,54,0.55)}
-.hero p{color:#6b7d73;font-size:13px;max-width:330px;margin:0 auto 24px;line-height:1.8}
+body{background:#070a08;color:#e8efe9;overflow-x:hidden}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #142018;position:sticky;top:0;background:rgba(7,10,8,0.94);backdrop-filter:blur(12px);z-index:20}
+.logo{font-weight:800;font-size:22px;color:#7CFF9E;text-shadow:0 0 18px rgba(124,255,158,0.35)}
+nav{display:flex;gap:8px}
+nav span{cursor:pointer;color:#6e8a74;font-size:12px;padding:8px 14px;border-radius:999px;border:1px solid #1a2a1e;background:#101410;transition:.25s}
+nav span.active{color:#06110a;background:linear-gradient(180deg,#7CFF9E,#2ECC71);border-color:#7CFF9E;box-shadow:0 0 20px rgba(124,255,158,0.45),0 0 40px rgba(46,204,113,0.25);font-weight:700}
+.btn-neon{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:9px 16px;border-radius:999px;font-size:12.5px;font-weight:800;border:none;cursor:pointer;box-shadow:0 0 20px rgba(124,255,158,0.35);transition:.25s}
+.btn-neon:hover{box-shadow:0 0 30px rgba(124,255,158,0.6);transform:scale(1.05)}
+.hero{padding:85px 20px 50px;text-align:center}
+.hero h1{font-size:34px;line-height:1.45;margin-bottom:14px;font-weight:800}
+.hero h1 span{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:2px 12px;border-radius:8px;box-shadow:0 0 20px rgba(124,255,158,0.4);display:inline-block;transform:rotate(-1deg)}
+.hero p{color:#8aa391;font-size:13.5px;max-width:390px;margin:0 auto 28px;line-height:2.1}
 .hero-btns{display:flex;gap:10px;justify-content:center}
-.btn-fill{background:linear-gradient(180deg,#0A5C36,#03261A);color:#c8e6d5;padding:12px 20px;border-radius:10px;border:1px solid #0A5C36;font-weight:700;cursor:pointer;box-shadow:0 0 18px rgba(10,92,54,0.55)}
-.btn-outline{background:transparent;color:#0A5C36;border:1px solid #1e3d2c;padding:12px 20px;border-radius:10px;cursor:pointer}
-.section{padding:50px 20px;border-top:1px solid #1e2a22}
-.section h2{color:#0A5C36;font-size:16px;margin-bottom:12px;text-shadow:0 0 14px rgba(10,92,54,0.6)}
-.card{background:#151C18;border:1px solid #1e2a22;border-radius:14px;padding:14px;margin-top:10px}
-.card h3{font-size:13px;color:#fff}
-.card p{font-size:11px;color:#6b7d73;margin-top:5px}
-.footer{text-align:center;padding:40px 20px 20px;border-top:1px solid #1e2a22;margin-top:30px;color:#5a6b62;font-size:11px;line-height:2}
+.btn-fill{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:12px 22px;border-radius:999px;border:none;font-weight:800;cursor:pointer;box-shadow:0 0 18px rgba(124,255,158,0.35);transition:.25s}
+.btn-fill:hover{box-shadow:0 0 30px rgba(124,255,158,0.6)}
+.btn-outline{background:#101410;color:#7CFF9E;border:1px solid #20402a;padding:12px 22px;border-radius:999px;cursor:pointer;transition:.25s}
+.btn-outline:hover{border-color:#7CFF9E;box-shadow:0 0 15px rgba(124,255,158,0.3)}
+.section{padding:48px 20px;border-top:1px solid #142018;max-width:560px;margin:0 auto}
+.section h2{color:#7CFF9E;font-size:16px;margin-bottom:10px;text-shadow:0 0 12px rgba(124,255,158,0.35)}
+.subtitle{color:#6e8a74;font-size:11.5px;margin-bottom:18px;line-height:1.8}
+.card{background:linear-gradient(180deg,#101410,#0a0f0b);border:1px solid #1a2a1e;border-radius:16px;padding:16px;margin-top:12px;transition:.35s;cursor:pointer}
+.card:hover{border-color:#7CFF9E;transform:translateY(-5px);background:linear-gradient(180deg,#142018,#0f1a12);box-shadow:0 0 20px rgba(124,255,158,0.35),0 0 50px rgba(46,204,113,0.18), inset 0 0 20px rgba(124,255,158,0.05)}
+.card h3{font-size:14px;color:#e8efe9;font-weight:700}
+.card p{font-size:12px;color:#8aa391;margin-top:6px;line-height:2}
+.tag{display:inline-block;margin-top:10px;font-size:10px;background:#142018;border:1px solid #244a2e;color:#7CFF9E;padding:3px 9px;border-radius:999px}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:16px}
+.stat{background:#101410;border:1px solid #1a2a1e;border-radius:14px;padding:14px;text-align:center;transition:.35s}
+.stat:hover{border-color:#7CFF9E;box-shadow:0 0 20px rgba(124,255,158,0.25)}
+.stat b{color:#7CFF9E;font-size:18px;display:block}
+.stat span{color:#6e8a74;font-size:10.5px}
+.steps{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.step{display:flex;gap:12px;align-items:flex-start;background:#101410;border:1px dashed #1e3a26;border-radius:14px;padding:14px;transition:.35s}
+.step:hover{border-style:solid;border-color:#7CFF9E;box-shadow:0 0 15px rgba(124,255,158,0.2)}
+.step .num{background:#7CFF9E;color:#06110a;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0;box-shadow:0 0 10px rgba(124,255,158,0.4)}
+.footer{text-align:center;padding:38px 20px 24px;border-top:1px solid #142018;margin-top:30px;color:#5a7a62;font-size:11px;line-height:2}
 </style>
 </head>
 <body>
 <header>
-<button class="btn-neon" onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">ابدأ مبادرة</button>
-<div style="display:flex;align-items:center;gap:12px">
+<button class="btn-neon" id="topBtn">ابدأ مبادرة</button>
+<div style="display:flex;align-items:center;gap:14px">
 <nav>
-<span onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})">الرئيسية</span>
-<span onclick="document.getElementById('mobs').scrollIntoView({behavior:'smooth'})">المبادرات</span>
-<span onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">عن المنصة</span>
+<span id="nav-home" class="active">الرئيسية</span>
+<span id="nav-mobs">المبادرات</span>
+<span id="nav-about">عن المنصة</span>
 </nav>
 <div class="logo">🌿 غراس</div>
 </div>
 </header>
+
 <div class="hero" id="home">
-<h1>أنت تملك <span>المهارة </span> والأرض<br>تحتاجها </h1>
-<p>غِراس هي مساحتك المجتمعية لتبادل المهارات سواء كنت مصمماً مبرمجاً مصورا أو محباً للعمل الميداني هناك مبادرة بيئية تنتظر بصمتك.</p>
+<h1>أنت تملك <span>المهارة</span> والأرض<br>تحتاجها</h1>
+<p>غِراس مهارة تملكها يمكن أن تتحول إلى شجره تُزرع أو صورة توقظ وعياً أو كلمة تُغيّر مساراً هنا نصل المبدعين بالمبادرات التي تستحقهم حقاً.</p>
 <div class="hero-btns">
-<button class="btn-fill">سجل بمهارتك</button>
-<button class="btn-outline">استكشف الفرص</button>
+<button class="btn-fill" id="joinBtn">سجل بمهارتك</button>
+<button class="btn-outline" id="moreBtn">اعرف أكثر</button>
 </div>
 </div>
-<div class="section" id="mobs">
-<h2>🌱 مبادرات تحتاج مهاراتك</h2>
-<div class="card"><h3>تصميم لوجو لمبادرة تشجير</h3><p>القاهرة - تطوع 3 ساعات</p></div>
-<div class="card"><h3>تصوير حملة تنظيف النيل</h3><p> يوم الجمعة</p></div>
-<div class="card"><h3>كتابة محتوى لتوعية بيئية</h3><p>أونلاين - مرن</p></div>
-</div>
+
 <div class="section" id="about">
-<h2>عن غراس</h2>
-<div class="card"><p style="color:#9aada3;line-height:1.8">نحن نربط المهارات بالمبادرات البيئية التي تحتاج مساعدة هذه الفكرة تطوع وتبادل خبرات فضلا منك فلتكن معنا .</p></div>
+<h2>لماذا غراس؟</h2>
+<p class="subtitle">لأننا رأينا مبادرات عظيمة تذبل لعدم وجود مصممين ومصورين أنهم يملكون العدسة ولا يجدون القضية.</p>
+<div class="card"><h3>🤝 ليست مجرد تطوع</h3><p>غِراس هي معادلة تبادل عادله أنت تمنح من وقتك ومهارتك والمبادرة تمنحك أثراً حقيقياً وتجربة ميدانية وشبكة من الأشخاص الذين يشبهونك في القيم والشغف.</p></div>
+<div class="card"><h3>💡 بلا تعقيد</h3><p>لا اس
+ هل وجدت مبادرة تؤمن بها؟ اضغط تطوع أخبرنا بما تجيده وسنصلك بهم في ذات اليوم.</p></div>
+<div class="stats">
+<div class="stat"><b>+120</b><span>مبادرة بيئية</span></div>
+<div class="stat"><b>+340</b><span>متطوع بمهارة</span></div>
+<div class="stat"><b>12</b><span>مدينة</span></div>
 </div>
+</div>
+
+<div class="section" id="how">
+<h2>كيف تعمل المنصة؟</h2>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><h3>اختر مبادرتك</h3><p>من التشجير وتنظيف ضفاف النيل، إلى التوعية في المدارس والتوثيق الميداني.</p></div></div>
+<div class="step"><div class="num">2</div><div><h3>اعرض مهارتك</h3><p>أخبرنا بما تتقن ساعة واحدة كفيلة بأن تصنع فرقاً.</p></div></div>
+<div class="step"><div class="num">3</div><div><h3>انزل إلى الميدان</h3><p>سترى غرستك تنمو أمام عينيك وكلماتك تُقرأ في كتيب طفل.</p></div></div>
+</div>
+</div>
+
+<div class="section" id="mobs">
+<h2>🌿 مبادرات تنتظر مهارتك الآن</h2>
+<div class="card"><h3> تصميم هوية بصرية لمبادرة تشجير </h3><p>مبادرة شبابية تستهدف زراعة 500 شجره وتحتاج إلى هوية بصرية لتعبر عن رسالتها.</p><span class="tag">تصميم • عاجل</span></div>
+<div class="card"><h3>توثيق حملة تنظيف نهر النيل</h3><p>يوم الجمعة القادم، ننطلق لتنظيف جزء من كورنيش المعادي نحتاج مصوراً يوثق هذا اليوم ليكون حافزاً للآخرين.</p><span class="tag">تصوير • ميداني</span></div>
+<div class="card"><h3>كتابة محتوى توعوي للأطفال</h3><p>نعمل على إعداد كتيب مبسط لطلاب المدارس حول إعادة التدوير والتوعيه المجتمعيه إن كنت تجيد الكتابة بلغة بسيطة وقريبة من قلب الطفل فمكانك معنا.</p><span class="tag">كتابة • عن بُعد</span></div>
+</div>
+
+<div class="section">
+<h2>رسالتنا</h2>
+<div class="card" style="border-style:dashed"><p style="color:#a8c4ad;line-height:2.2">نحن نؤمن بأن التغيير لا يشترط أن يكون كبيراً ليكون مهماً شجره واحده ومنشور واحد يوقظ وعياً وصورة واحدة تجعل إنساناً يفكر هل هذا هو ما يصنع الفرق ؟ وُلدت غِراس لتجمع بمن يؤمنون بأن الأرض أمانه وأن تركها أفضل قليلاً مما وجدناها عليه هو أعظم إنجاز إن كنت واحداً منهم فأهلاً بك بيننا.</p></div>
+</div>
+
 <div class="footer">
-created by dina alssawy<br>
-All Rights Reserved © 2026 - غراس 🌿
+created by dina alssawy <br>
+All Rights Reserved © 2026 - غراس 🌿<br>
+<span style="color:#244a2e">ازرع مهارة، احصد أثراً</span>
 </div>
+
+<script>
+const navs={home:document.getElementById('nav-home'),mobs:document.getElementById('nav-mobs'),about:document.getElementById('nav-about')};
+const secs={home:document.getElementById('home'),mobs:document.getElementById('nav-about').closest('.section').previousElementSibling.previousElementSibling.id==='about'?document.getElementById('about'):document.getElementById('about'),about:document.getElementById('about'),mobsSec:document.getElementById('mobs')};
+function go(k){
+  Object.values(navs).forEach(n=>n.classList.remove('active'));
+  if(k==='home'){navs.home.classList.add('active');document.getElementById('home').scrollIntoView({behavior:'smooth'})}
+  else if(k==='mobs'){navs.mobs.classList.add('active');document.getElementById('mobs').scrollIntoView({behavior:'smooth'})}
+  else {navs.about.classList.add('active');document.getElementById('about').scrollIntoView({behavior:'smooth'})}
+}
+navs.home.onclick=()=>go('home');navs.mobs.onclick=()=>go('mobs');navs.about.onclick=()=>go('about');
+document.getElementById('moreBtn').onclick=()=>go('about');
+document.getElementById('joinBtn').onclick=()=>go('mobs');
+document.getElementById('topBtn').onclick=()=>go('mobs');
+window.addEventListener('scroll',()=>{
+ let cur='home';const y=window.scrollY+150;
+ if(document.getElementById('mobs').offsetTop<=y) cur='mobs';
+ if(document.getElementById('about').offsetTop<=y && document.getElementById('about').offsetTop < document.getElementById('mobs').offsetTop) cur='about';
+ // تعديل بسيط عشان الترتيب عندك about قبل mobs
+ if(window.scrollY+150 >= document.getElementById('about').offsetTop) cur='about';
+ if(window.scrollY+150 >= document.getElementById('mobs').offsetTop) cur='mobs';
+ Object.values(navs).forEach(n=>n.classList.remove('active'));
+ if(navs[cur])navs[cur].classList.add('active');
+});
+</script>
 </body>
 </html>
