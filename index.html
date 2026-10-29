@@ -7,41 +7,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Tajawal',sans-serif}
-body{background:#070a08;color:#e8efe9;overflow-x:hidden}
-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #142018;position:sticky;top:0;background:rgba(7,10,8,0.94);backdrop-filter:blur(12px);z-index:20}
-.logo{font-weight:800;font-size:22px;color:#7CFF9E;text-shadow:0 0 18px rgba(124,255,158,0.35)}
+body{background:#010201;color:#e8efe9;overflow-x:hidden}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #1a2e14;position:sticky;top:0;background:rgba(1,2,1,0.97);backdrop-filter:blur(12px);z-index:20}
+.logo{font-weight:800;font-size:22px;color:#2ECC71;text-shadow:0 0 12px rgba(46,204,113,0.4)}
+.logo span{color:#8C6A14;text-shadow:0 0 10px rgba(140,106,20,0.4)}
 nav{display:flex;gap:8px}
-nav span{cursor:pointer;color:#6e8a74;font-size:12px;padding:8px 14px;border-radius:999px;border:1px solid #1a2a1e;background:#101410;transition:.25s}
-nav span.active{color:#06110a;background:linear-gradient(180deg,#7CFF9E,#2ECC71);border-color:#7CFF9E;box-shadow:0 0 20px rgba(124,255,158,0.45),0 0 40px rgba(46,204,113,0.25);font-weight:700}
-.btn-neon{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:9px 16px;border-radius:999px;font-size:12.5px;font-weight:800;border:none;cursor:pointer;box-shadow:0 0 20px rgba(124,255,158,0.35);transition:.25s}
-.btn-neon:hover{box-shadow:0 0 30px rgba(124,255,158,0.6);transform:scale(1.05)}
+nav span{cursor:pointer;color:#5a7560;font-size:12px;padding:8px 14px;border-radius:999px;border:1px solid #1a2e14;background:#080c06;transition:.25s}
+nav span.active{color:#010201;background:linear-gradient(180deg,#2ECC71,#145A26);border-color:#2ECC71;box-shadow:0 0 15px rgba(46,204,113,0.4);font-weight:700}
+nav span:hover{border-color:#8C6A14;color:#D4B15A}
+.btn-neon{background:linear-gradient(180deg,#2ECC71,#145A26);color:#010201;padding:9px 16px;border-radius:999px;font-size:12.5px;font-weight:800;border:1px solid #1a4d25;cursor:pointer;box-shadow:0 0 15px rgba(46,204,113,0.25)}
 .hero{padding:85px 20px 50px;text-align:center}
-.hero h1{font-size:34px;line-height:1.45;margin-bottom:14px;font-weight:800}
-.hero h1 span{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:2px 12px;border-radius:8px;box-shadow:0 0 20px rgba(124,255,158,0.4);display:inline-block;transform:rotate(-1deg)}
-.hero p{color:#8aa391;font-size:13.5px;max-width:390px;margin:0 auto 28px;line-height:2.1}
+.hero h1{font-size:34px;line-height:1.45;margin-bottom:14px;font-weight:800;color:#E8F5E9}
+.hero h1 span{background:linear-gradient(180deg,#2ECC71,#0A2E14);color:#010201;padding:2px 12px;border-radius:8px;box-shadow:0 0 15px rgba(46,204,113,0.3);display:inline-block;transform:rotate(-1deg);border:1px solid #1a4d25}
+.hero h1 .gold{color:#8C6A14;background:none;box-shadow:none;border:none;padding:0;transform:none}
+.hero p{color:#6b8a6f;font-size:13.5px;max-width:390px;margin:0 auto 28px;line-height:2.1}
 .hero-btns{display:flex;gap:10px;justify-content:center}
-.btn-fill{background:linear-gradient(180deg,#7CFF9E,#2ECC71);color:#06110a;padding:12px 22px;border-radius:999px;border:none;font-weight:800;cursor:pointer;box-shadow:0 0 18px rgba(124,255,158,0.35);transition:.25s}
-.btn-fill:hover{box-shadow:0 0 30px rgba(124,255,158,0.6)}
-.btn-outline{background:#101410;color:#7CFF9E;border:1px solid #20402a;padding:12px 22px;border-radius:999px;cursor:pointer;transition:.25s}
-.btn-outline:hover{border-color:#7CFF9E;box-shadow:0 0 15px rgba(124,255,158,0.3)}
-.section{padding:48px 20px;border-top:1px solid #142018;max-width:560px;margin:0 auto}
-.section h2{color:#7CFF9E;font-size:16px;margin-bottom:10px;text-shadow:0 0 12px rgba(124,255,158,0.35)}
-.subtitle{color:#6e8a74;font-size:11.5px;margin-bottom:18px;line-height:1.8}
-.card{background:linear-gradient(180deg,#101410,#0a0f0b);border:1px solid #1a2a1e;border-radius:16px;padding:16px;margin-top:12px;transition:.35s;cursor:pointer}
-.card:hover{border-color:#7CFF9E;transform:translateY(-5px);background:linear-gradient(180deg,#142018,#0f1a12);box-shadow:0 0 20px rgba(124,255,158,0.35),0 0 50px rgba(46,204,113,0.18), inset 0 0 20px rgba(124,255,158,0.05)}
-.card h3{font-size:14px;color:#e8efe9;font-weight:700}
-.card p{font-size:12px;color:#8aa391;margin-top:6px;line-height:2}
-.tag{display:inline-block;margin-top:10px;font-size:10px;background:#142018;border:1px solid #244a2e;color:#7CFF9E;padding:3px 9px;border-radius:999px}
+.btn-fill{background:linear-gradient(180deg,#2ECC71,#145A26);color:#010201;padding:12px 22px;border-radius:999px;border:1px solid #1a4d25;font-weight:800;cursor:pointer;box-shadow:0 0 12px rgba(46,204,113,0.25)}
+.btn-outline{background:#080c06;color:#8C6A14;border:1px solid #3a2e14;padding:12px 22px;border-radius:999px;cursor:pointer;font-weight:700}
+.btn-outline:hover{background:#1a2314;border-color:#8C6A14;color:#D4B15A;box-shadow:0 0 10px rgba(140,106,20,0.2)}
+.section{padding:48px 20px;border-top:1px solid #0f1f10;max-width:560px;margin:0 auto}
+.section h2{color:#2ECC71;font-size:16px;margin-bottom:10px}
+.section h2.gold-title{color:#8C6A14}
+.subtitle{color:#5a7560;font-size:11.5px;margin-bottom:18px;line-height:1.8}
+.card{background:linear-gradient(180deg,#080c06,#030401);border:1px solid #1a2e14;border-radius:16px;padding:16px;margin-top:12px;transition:.35s;cursor:pointer;position:relative}
+.card::before{content:'';position:absolute;top:0;right:12px;left:12px;height:1px;background:linear-gradient(90deg,transparent,#8C6A14,transparent);opacity:0.2}
+.card:hover{border-color:#145A26;transform:translateY(-5px);background:linear-gradient(180deg,#0d1f0f,#080c06);box-shadow:0 0 20px rgba(20,90,38,0.5),0 0 40px rgba(140,106,20,0.15), inset 0 1px 0 rgba(140,106,20,0.1)}
+.card h3{font-size:14px;color:#d8e8d5;font-weight:700}
+.card p{font-size:12px;color:#6b8a6f;margin-top:6px;line-height:2}
+.tag{display:inline-block;margin-top:10px;font-size:10px;background:#0a1a0c;border:1px solid #1a3a20;color:#2ECC71;padding:3px 9px;border-radius:999px}
+.tag.gold{background:#1a1605;border-color:#3a2e14;color:#8C6A14}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:16px}
-.stat{background:#101410;border:1px solid #1a2a1e;border-radius:14px;padding:14px;text-align:center;transition:.35s}
-.stat:hover{border-color:#7CFF9E;box-shadow:0 0 20px rgba(124,255,158,0.25)}
-.stat b{color:#7CFF9E;font-size:18px;display:block}
-.stat span{color:#6e8a74;font-size:10.5px}
+.stat{background:linear-gradient(180deg,#080c06,#030401);border:1px solid #1a2e14;border-radius:14px;padding:14px;text-align:center}
+.stat b{color:#2ECC71;font-size:18px;display:block}
+.stat:nth-child(2) b{color:#8C6A14}
+.stat span{color:#5a7560;font-size:10.5px}
 .steps{display:flex;flex-direction:column;gap:10px;margin-top:12px}
-.step{display:flex;gap:12px;align-items:flex-start;background:#101410;border:1px dashed #1e3a26;border-radius:14px;padding:14px;transition:.35s}
-.step:hover{border-style:solid;border-color:#7CFF9E;box-shadow:0 0 15px rgba(124,255,158,0.2)}
-.step .num{background:#7CFF9E;color:#06110a;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0;box-shadow:0 0 10px rgba(124,255,158,0.4)}
-.footer{text-align:center;padding:38px 20px 24px;border-top:1px solid #142018;margin-top:30px;color:#5a7a62;font-size:11px;line-height:2}
+.step{display:flex;gap:12px;align-items:flex-start;background:#080c06;border:1px dashed #1a2e14;border-radius:14px;padding:14px;transition:.3s}
+.step:hover{border-style:solid;border-color:#145A26;box-shadow:0 0 12px rgba(20,90,38,0.3)}
+.step .num{background:#145A26;color:#D4F5D9;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0;border:1px solid #2ECC71}
+.step:nth-child(2) .num{background:#3a2e14;color:#D4B15A;border-color:#8C6A14}
+.footer{text-align:center;padding:38px 20px 24px;border-top:1px solid #0f1f10;margin-top:30px;color:#3d5a43;font-size:11px;line-height:2}
 </style>
 </head>
 <body>
@@ -53,7 +58,7 @@ nav span.active{color:#06110a;background:linear-gradient(180deg,#7CFF9E,#2ECC71)
 <span id="nav-mobs">المبادرات</span>
 <span id="nav-about">عن المنصة</span>
 </nav>
-<div class="logo">🌿 غراس</div>
+<div class="logo">🌿 غراس <span>•</span></div>
 </div>
 </header>
 
@@ -82,7 +87,7 @@ nav span.active{color:#06110a;background:linear-gradient(180deg,#7CFF9E,#2ECC71)
 <div class="section" id="how">
 <h2>كيف تعمل المنصة؟</h2>
 <div class="steps">
-<div class="step"><div class="num">1</div><div><h3>اختر مبادرتك</h3><p>من التشجير وتنظيف ضفاف النيل، إلى التوعية في المدارس والتوثيق الميداني.</p></div></div>
+<div class="step"><div class="num">1</div><div><h3>اختر مبادرتك</h3><p>من التشجير وتنظيف ضفاف النيل إلى التوعية في المدارس والتوثيق الميداني.</p></div></div>
 <div class="step"><div class="num">2</div><div><h3>اعرض مهارتك</h3><p>أخبرنا بما تتقن ساعة واحدة كفيلة بأن تصنع فرقاً.</p></div></div>
 <div class="step"><div class="num">3</div><div><h3>انزل إلى الميدان</h3><p>سترى غرستك تنمو أمام عينيك وكلماتك تُقرأ في كتيب طفل.</p></div></div>
 </div>
@@ -90,44 +95,43 @@ nav span.active{color:#06110a;background:linear-gradient(180deg,#7CFF9E,#2ECC71)
 
 <div class="section" id="mobs">
 <h2>🌿 مبادرات تنتظر مهارتك الآن</h2>
-<div class="card"><h3> تصميم هوية بصرية لمبادرة تشجير </h3><p>مبادرة شبابية تستهدف زراعة 500 شجره وتحتاج إلى هوية بصرية لتعبر عن رسالتها.</p><span class="tag">تصميم • عاجل</span></div>
-<div class="card"><h3>توثيق حملة تنظيف نهر النيل</h3><p>يوم الجمعة القادم، ننطلق لتنظيف جزء من كورنيش المعادي نحتاج مصوراً يوثق هذا اليوم ليكون حافزاً للآخرين.</p><span class="tag">تصوير • ميداني</span></div>
-<div class="card"><h3>كتابة محتوى توعوي للأطفال</h3><p>نعمل على إعداد كتيب مبسط لطلاب المدارس حول إعادة التدوير والتوعيه المجتمعيه إن كنت تجيد الكتابة بلغة بسيطة وقريبة من قلب الطفل فمكانك معنا.</p><span class="tag">كتابة • عن بُعد</span></div>
+<div class="card"><h3> تصميم هوية بصرية لمبادرة تشجير </h3><p>مبادرة شبابية تستهدف زراعة 500 شجره وتحتاج إلى هوية بصرية بسيطة تعبر عن رسالتها.</p><span class="tag">تصميم • عاجل</span> <span class="tag gold">دهبي غامق</span></div>
+<div class="card"><h3>توثيق حملة تنظيف نهر النيل</h3><p>يوم الجمعة القادم ننطلق لتنظيف جزء من كورنيش المعادي نحتاج مصوراً يوثق هذا اليوم ليكون حافزاً للآخرين.</p><span class="tag">تصوير • ميداني</span></div>
+<div class="card"><h3>كتابة محتوى توعوي للأطفال</h3><p>نعمل على إعداد كتيب مبسط لطلاب المدارس حول إعادة التدوير والتوعيه البيئيه إن كنت تجيد الكتابة بلغة بسيطة وقريبة من قلب الطفل فمكانك معنا.</p><span class="tag">كتابة • عن بُعد</span></div>
 </div>
 
 <div class="section">
-<h2>رسالتنا</h2>
-<div class="card" style="border-style:dashed"><p style="color:#a8c4ad;line-height:2.2">نحن نؤمن بأن التغيير لا يشترط أن يكون كبيراً ليكون مهماً شجره واحده ومنشور واحد يوقظ وعياً وصورة واحدة تجعل إنساناً يفكر هل هذا هو ما يصنع الفرق ؟ وُلدت غِراس لتجمع بمن يؤمنون بأن الأرض أمانه وأن تركها أفضل قليلاً مما وجدناها عليه هو أعظم إنجاز إن كنت واحداً منهم فأهلاً بك بيننا.</p></div>
+<h2 class="gold-title">رسالتنا</h2>
+<div class="card" style="border-style:dashed;border-color:#3a2e14"><p style="color:#8ab090;line-height:2.2">نحن نؤمن بأن التغيير لا يشترط أن يكون كبيراً ليكون مهماً شجره واحدة ومنشور واحد يوقظ وعياً وصورة واحدة تجعل إنساناً يفكر هذا هو ما يصنع الفرق ؟ وُلدت غِراس لتجمع من يؤمنون بأن الأرض أمانه وأن تركها أفضل قليلاً مما وجدناها عليه هو أعظم إنجاز إن كنت واحداً منهم فأهلاً بك بيننا.</p></div>
 </div>
 
 <div class="footer">
 created by dina alssawy <br>
 All Rights Reserved © 2026 - غراس 🌿<br>
-<span style="color:#244a2e">ازرع مهارة، احصد أثراً</span>
+<span style="color:#8C6A14">ازرع مهارة، احصد أثراً</span>
 </div>
 
 <script>
-const navs={home:document.getElementById('nav-home'),mobs:document.getElementById('nav-mobs'),about:document.getElementById('nav-about')};
-const secs={home:document.getElementById('home'),mobs:document.getElementById('nav-about').closest('.section').previousElementSibling.previousElementSibling.id==='about'?document.getElementById('about'):document.getElementById('about'),about:document.getElementById('about'),mobsSec:document.getElementById('mobs')};
-function go(k){
-  Object.values(navs).forEach(n=>n.classList.remove('active'));
-  if(k==='home'){navs.home.classList.add('active');document.getElementById('home').scrollIntoView({behavior:'smooth'})}
-  else if(k==='mobs'){navs.mobs.classList.add('active');document.getElementById('mobs').scrollIntoView({behavior:'smooth'})}
-  else {navs.about.classList.add('active');document.getElementById('about').scrollIntoView({behavior:'smooth'})}
+function scrollToSec(id){
+  const el=document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
 }
-navs.home.onclick=()=>go('home');navs.mobs.onclick=()=>go('mobs');navs.about.onclick=()=>go('about');
-document.getElementById('moreBtn').onclick=()=>go('about');
-document.getElementById('joinBtn').onclick=()=>go('mobs');
-document.getElementById('topBtn').onclick=()=>go('mobs');
+function setActive(id){
+  document.querySelectorAll('nav span').forEach(s=>s.classList.remove('active'));
+  document.getElementById('nav-'+id)?.classList.add('active');
+}
+document.getElementById('nav-home').onclick=()=>{scrollToSec('home');setActive('home')};
+document.getElementById('nav-about').onclick=()=>{scrollToSec('about');setActive('about')};
+document.getElementById('nav-mobs').onclick=()=>{scrollToSec('mobs');setActive('mobs')};
+document.getElementById('moreBtn').onclick=()=>{scrollToSec('about');setActive('about')};
+document.getElementById('joinBtn').onclick=()=>{scrollToSec('mobs');setActive('mobs')};
+document.getElementById('topBtn').onclick=()=>{scrollToSec('mobs');setActive('mobs')};
 window.addEventListener('scroll',()=>{
- let cur='home';const y=window.scrollY+150;
- if(document.getElementById('mobs').offsetTop<=y) cur='mobs';
- if(document.getElementById('about').offsetTop<=y && document.getElementById('about').offsetTop < document.getElementById('mobs').offsetTop) cur='about';
- // تعديل بسيط عشان الترتيب عندك about قبل mobs
- if(window.scrollY+150 >= document.getElementById('about').offsetTop) cur='about';
- if(window.scrollY+150 >= document.getElementById('mobs').offsetTop) cur='mobs';
- Object.values(navs).forEach(n=>n.classList.remove('active'));
- if(navs[cur])navs[cur].classList.add('active');
+  const y=window.scrollY+250;
+  let cur='home';
+  if(y>=document.getElementById('about').offsetTop) cur='about';
+  if(y>=document.getElementById('mobs').offsetTop) cur='mobs';
+  setActive(cur);
 });
 </script>
 </body>
